@@ -12,5 +12,15 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 
 			Assert.IsAssignableFrom<IDockingSystem>(dockingSystem);
 		}
+
+		[Fact]
+		public void Dock_WhenNull_ReturnEmptyArray()
+		{
+			var dockingSystem = new SpaceStationDockingSystem();
+
+			var result = dockingSystem.Dock(null);
+
+			Assert.Empty(result);
+		}
 	}
 }
