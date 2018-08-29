@@ -8,9 +8,10 @@ namespace SpaceShuttleDockingSystem.Core
 	{
 		public int[] Dock(int[] configuration)
 		{
-			if (configuration == null || !configuration.Any()) return new int[0];
+			if (configuration == null) return new int[0];
+			if (!configuration.Any()) return new int[0];
 
-			var index = Array.LastIndexOf(configuration, 0);			
+			var index = Array.IndexOf(configuration, 0);			
 			configuration[index] = 1;
 
 			return configuration;

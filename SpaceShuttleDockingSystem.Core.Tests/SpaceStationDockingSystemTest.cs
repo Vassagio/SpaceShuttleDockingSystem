@@ -33,17 +33,44 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 			Assert.Empty(result);
 		}
 
-		[Theory]
-		[InlineData(new[] {0}, new[] {1})]
-		[InlineData(new[] {1, 0}, new[] {1, 1})]
-		[InlineData(new[] {1, 0, 0}, new[] {1, 0, 1})]
-		public void Dock_WhenValid_ReturnsNewConfiguration(int[] configuration, int[] expected)
+		[Fact]
+		public void Dock_WhenOneEntry_ReturnOccupiedArray()
 		{
 			var dockingSystem = new SpaceStationDockingSystem();
 
-			var result = dockingSystem.Dock(configuration);
+			var result = dockingSystem.Dock(new[] {0});
 
-			Assert.Equal(expected, result);
+			Assert.Equal(new[] {1}, result);
+		}
+
+		[Fact]
+		public void Dock_WhenOneUnoccupiedEntry_ReturnAllOccupiedArray()
+		{
+			var dockingSystem = new SpaceStationDockingSystem();
+
+			var result = dockingSystem.Dock(new[] {1, 0});
+
+			Assert.Equal(new[] {1, 1}, result);
+		}
+
+		[Fact]
+		public void Dock_WhenLeftMostEntryUnoccupied_ReturnLeftMostEntryOccupiedArray()
+		{
+			var dockingSystem = new SpaceStationDockingSystem();
+
+			var result = dockingSystem.Dock(new[] {0, 1, 0});
+
+			Assert.Equal(new[] {1, 1, 0}, result);
+		}
+
+		[Fact]
+		public void Dock_WhenMultipleUnoccupiedEntries_ReturnEntryOccupiedWithMostBufferArray()
+		{
+			var dockingSystem = new SpaceStationDockingSystem();
+
+			var result = dockingSystem.Dock(new[] {1, 0, 0});
+
+			Assert.Equal(new[] {1, 0, 1}, result);
 		}
 	}
 }
