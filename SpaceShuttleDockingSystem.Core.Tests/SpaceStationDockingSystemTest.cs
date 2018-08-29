@@ -34,7 +34,7 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 		}
 
 		[Fact]
-		public void Dock_WhenOneEntry_ReturnOccupiedArray()
+		public void Dock_WhenOneEntry_ReturnArrayWithEntryOccupied()
 		{
 			var dockingSystem = new SpaceStationDockingSystem();
 
@@ -44,7 +44,7 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 		}
 
 		[Fact]
-		public void Dock_WhenOneUnoccupiedEntry_ReturnAllOccupiedArray()
+		public void Dock_WhenOneUnoccupiedEntry_ReturnArrayWithAllOccupied()
 		{
 			var dockingSystem = new SpaceStationDockingSystem();
 
@@ -54,7 +54,7 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 		}
 
 		[Fact]
-		public void Dock_WhenLeftMostEntryUnoccupied_ReturnLeftMostEntryOccupiedArray()
+		public void Dock_WhenLeftMostEntryUnoccupied_ReturnArrayWithLeftMostEntryOccupied()
 		{
 			var dockingSystem = new SpaceStationDockingSystem();
 
@@ -64,13 +64,23 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 		}
 
 		[Fact]
-		public void Dock_WhenMultipleUnoccupiedEntries_ReturnEntryOccupiedWithMostBufferArray()
+		public void Dock_WhenMultipleUnoccupiedEntries_WhenOneOccupied_ReturnArrayWithEntryOccupiedWithMostBufferLength()
 		{
 			var dockingSystem = new SpaceStationDockingSystem();
 
 			var result = dockingSystem.Dock(new[] {1, 0, 0});
 
 			Assert.Equal(new[] {1, 0, 1}, result);
+		}
+
+		[Fact]
+		public void Dock_WhenMultipleUnoccupiedEntries_WhenMultipleOccupied_ReturnArrayWithEntryOccupiedWithMostBufferLength()
+		{
+			var dockingSystem = new SpaceStationDockingSystem();
+
+			var result = dockingSystem.Dock(new[] {1, 0, 1, 0});
+
+			Assert.Equal(new[] {1, 1, 1, 0}, result);
 		}
 	}
 }
