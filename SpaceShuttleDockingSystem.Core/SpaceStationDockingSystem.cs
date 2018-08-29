@@ -17,16 +17,14 @@ namespace SpaceShuttleDockingSystem.Core
 			{
 				if (configuration[unoccupiedIndex] == 1) continue;
 
-				for (var occupiedIndex = 0; occupiedIndex < configuration.Length; occupiedIndex++)
-				{
-					if (configuration[occupiedIndex] == 0) continue;
+				var preBufferLength = Math.Max(unoccupiedIndex - Array.FindLastIndex(configuration, unoccupiedIndex, x => x == 1), 1);
+				var postBufferLength = Math.Max(Array.FindIndex(configuration, unoccupiedIndex, x => x == 1) - unoccupiedIndex, 1);
 
-					var bufferLength = Math.Abs(unoccupiedIndex - occupiedIndex);
-					if (maxBufferLength >= bufferLength) continue;
+				var bufferLength = Math.Max(preBufferLength, postBufferLength);
+				if (maxBufferLength >= bufferLength) continue;
 
-					maxBufferLength = bufferLength;
-					bestIndex = unoccupiedIndex;
-				}
+				maxBufferLength = bufferLength;
+				bestIndex = unoccupiedIndex;
 			}
 
 			configuration[bestIndex] = 1;
