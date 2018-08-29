@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)"
+              GeneratedClassNamespace="SpaceShuttleDockingSystem.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConfigurationQuestion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Configuration?</Value>
+    </Setting>
+    <Setting Name="PlayAgainQuestion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Play Again? (Y/N)</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

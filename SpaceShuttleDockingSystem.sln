@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShuttleDockingSystem.Core", "SpaceShuttleDockingSystem.Core\SpaceShuttleDockingSystem.Core.csproj", "{91E18792-011B-43F3-BCC3-14AAD5E88E21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6D296651-ED44-443E-B4B4-EE2B30EB6DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShuttleDockingSystem.Core.Tests", "SpaceShuttleDockingSystem.Core.Tests\SpaceShuttleDockingSystem.Core.Tests.csproj", "{1D8E209F-E550-4E68-BD5E-03A7A848DF23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShuttleDockingSystem.UI.Implementation", "SpaceShuttleDockingSystem.UI.Implementation\SpaceShuttleDockingSystem.UI.Implementation.csproj", "{FF97C25E-72E0-4690-9C92-C593AF0D16C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShuttleDockingSystem.UI", "SpaceShuttleDockingSystem.UI\SpaceShuttleDockingSystem.UI.csproj", "{2F6CBCC8-6164-4020-ABE4-430AC5C32231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Utilities", "Application.Utilities\Application.Utilities.csproj", "{6499C608-396D-4E55-B6AC-94F09D9A0D5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91E18792-011B-43F3-BCC3-14AAD5E88E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E18792-011B-43F3-BCC3-14AAD5E88E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E18792-011B-43F3-BCC3-14AAD5E88E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E18792-011B-43F3-BCC3-14AAD5E88E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8E209F-E550-4E68-BD5E-03A7A848DF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8E209F-E550-4E68-BD5E-03A7A848DF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8E209F-E550-4E68-BD5E-03A7A848DF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8E209F-E550-4E68-BD5E-03A7A848DF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF97C25E-72E0-4690-9C92-C593AF0D16C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF97C25E-72E0-4690-9C92-C593AF0D16C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF97C25E-72E0-4690-9C92-C593AF0D16C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF97C25E-72E0-4690-9C92-C593AF0D16C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6CBCC8-6164-4020-ABE4-430AC5C32231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6CBCC8-6164-4020-ABE4-430AC5C32231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6CBCC8-6164-4020-ABE4-430AC5C32231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6CBCC8-6164-4020-ABE4-430AC5C32231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6499C608-396D-4E55-B6AC-94F09D9A0D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6499C608-396D-4E55-B6AC-94F09D9A0D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6499C608-396D-4E55-B6AC-94F09D9A0D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6499C608-396D-4E55-B6AC-94F09D9A0D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D8E209F-E550-4E68-BD5E-03A7A848DF23} = {6D296651-ED44-443E-B4B4-EE2B30EB6DCB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9081DDD0-CF59-4E9B-8524-DBD8DB1773CE}
+	EndGlobalSection
+EndGlobal
