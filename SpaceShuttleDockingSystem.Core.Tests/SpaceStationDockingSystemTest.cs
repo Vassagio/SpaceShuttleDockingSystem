@@ -32,5 +32,16 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 
 			Assert.Empty(result);
 		}
+
+		[Theory]
+		[InlineData(new[] {0}, new[] {1})]
+		public void Dock_WhenValid_ReturnsNewConfiguration(int[] configuration, int[] expected)
+		{
+			var dockingSystem = new SpaceStationDockingSystem();
+
+			var result = dockingSystem.Dock(configuration);
+
+			Assert.Equal(expected, result);
+		}
 	}
 }
