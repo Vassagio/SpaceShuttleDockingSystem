@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using SpaceShuttleDockingSystem.UI.Implementation;
 
 namespace SpaceShuttleDockingSystem.Core
@@ -8,8 +9,11 @@ namespace SpaceShuttleDockingSystem.Core
 		public int[] Dock(int[] configuration)
 		{
 			if (configuration == null || !configuration.Any()) return new int[0];
-			
-			return new[] {1};
+
+			var index = Array.LastIndexOf(configuration, 0);			
+			configuration[index] = 1;
+
+			return configuration;
 		}
 	}
 }

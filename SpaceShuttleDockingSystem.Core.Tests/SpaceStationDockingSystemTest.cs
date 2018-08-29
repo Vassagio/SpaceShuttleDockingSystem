@@ -35,6 +35,8 @@ namespace SpaceShuttleDockingSystem.Core.Tests
 
 		[Theory]
 		[InlineData(new[] {0}, new[] {1})]
+		[InlineData(new[] {1, 0}, new[] {1, 1})]
+		[InlineData(new[] {1, 0, 0}, new[] {1, 0, 1})]
 		public void Dock_WhenValid_ReturnsNewConfiguration(int[] configuration, int[] expected)
 		{
 			var dockingSystem = new SpaceStationDockingSystem();
